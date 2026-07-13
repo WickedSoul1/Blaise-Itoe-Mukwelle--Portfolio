@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | MY PORTFOLIO</title>
+
+    <link rel="stylesheet" href="../app.css">
+    <link rel="stylesheet" href="about-me.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4d79c8df4d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">BLAISE ITOE MUKWELLE</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about-me.html" class="active">About</a></li>
+            <li><a href="projects-page.html">Projects</a></li>
+            <li><a href="academic-planner.html">Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">☰</div>
+    </nav>
+</header>
+
+<section class="about-hero reveal">
+    <h1>About Me</h1>
+    <p>
+        I am a dedicated student and aspiring cybersecurity professional who loves building web projects, solving problems, and learning new technologies also an AI enthusiast and prompt engineer. My portfolio showcases my skills, projects, and achievements in web development and cybersecurity.
+    </p>
+</section>
+
+<section class="profile reveal">
+    <img id="profilePic" src="assets/profile picture.png" alt="Profile picture">
+    <div class="profile-info">
+        <!-- upload controls removed per user request -->
+        
+        <h2>Hello, I'm Blaise Itoe Mukwelle</h2>
+        <p>
+            I am a student with a strong interest in cybersecurity, web development, and digital content. I enjoy creating responsive websites, building useful tools, and sharing knowledge with others.
+        </p>
+        <p>
+            My portfolio showcases my academic work, personal projects, skills, and achievements. I build everything with clean design and user-friendly experiences.
+        </p>
+    </div>
+</section>
+
+<section class="active-level reveal">
+    <h2>Active Level</h2>
+    <div class="level-grid">
+        <div class="level-card">
+            <h3>Web Development</h3>
+            <p>Expert at building modern, responsive portfolio and project pages using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="level-card">
+            <h3>Cybersecurity</h3>
+            <p>Practicing ethical hacking and secure development with a strong focus on data privacy and protection.</p>
+        </div>
+        <div class="level-card">
+            <h3>AI & Automation</h3>
+            <p>Exploring AI prompt engineering, automation tools, and smart workflows for better project efficiency.</p>
+        </div>
+    </div>
+</section>
+
+<section class="education reveal">
+    <h2>Education & Experience</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>2025 - Present</h3>
+            <p>Student, MIVA Open University</p>
+        </div>
+        <div class="timeline-item">
+            <h3>2023 - 2024</h3>
+            <p>Web Development Intern/ AI Prompt Engineer</p>
+        </div>
+        <div class="timeline-item">
+            <h3>2022 - 2023</h3>
+            <p>Cybersecurity Club Member/ AI Enthusiast/ Web Designer</p>
+        </div>
+    </div>
+</section>
+
+<section class="skills reveal">
+    <h2>Skills</h2>
+    <div class="skill">
+        <h3>HTML</h3>
+        <div class="bar"><div class="progress html"></div></div>
+    </div>
+    <div class="skill">
+        <h3>CSS</h3>
+        <div class="bar"><div class="progress css"></div></div>
+    </div>
+    <div class="skill">
+        <h3>JavaScript</h3>
+        <div class="bar"><div class="progress js"></div></div>
+    </div>
+    <div class="skill">
+        <h3>Git</h3>
+        <div class="bar"><div class="progress git"></div></div>
+    </div>
+</section>
+
+<section class="career reveal">
+    <h2>Career Goals</h2>
+    <p>
+        I aim to build secure web applications, contribute to cybersecurity initiatives, and continue learning through real-world projects and academic research.
+    </p>
+</section>
+
+<section class="hobbies reveal">
+    <h2>Hobbies</h2>
+    <ul>
+        <li>Programming challenge solving</li>
+        <li>Learning cyber defense</li>
+        <li>Writing technical articles</li>
+        <li>Creating web designs</li>
+        <li>Meeting and Networking</li>
+    </ul>
+</section>
+
+<section class="achievements reveal">
+    <h2>Achievements</h2>
+    <table>
+        <thead>
+            <tr><th>Year</th><th>Achievement</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>2026</td><td>Completed cybersecurity Cisco Networking Certification</td></tr>
+            <tr><td>2024</td><td>Built an academic planner AI Assistance Website</td></tr>
+            <tr><td>2023</td><td>Published student portfolio website</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="video reveal">
+    <h2>Cybersecurity Overview</h2>
+    <p class="video-description">Watch this short overview highlighting ethical hacking, secure design, and digital protection.</p>
+    <video controls width="100%" poster="assets/videos/cybersecurity-poster.svg" style="border-radius: 20px; box-shadow: 0 16px 40px rgba(35, 57, 93, 0.08);">
+        <source src="assets/videos/intro.mp4" type="video/mp4">
+        Your browser does not support the video tag, or the video file is not available yet.
+    </video>
+</section>
+
+<footer>
+    <div class="socials">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>© Blaise in corporation to 2026 MIVA Open University</p>
+</footer>
+
+<script src="about-me.js"></script>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav-links');
+    hamburger.onclick = () => nav.classList.toggle('show');
+</script>
+</body>
+</html>

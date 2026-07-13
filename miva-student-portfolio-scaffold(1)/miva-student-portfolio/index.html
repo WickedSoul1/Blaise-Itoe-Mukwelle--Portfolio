@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+
+    <link rel="stylesheet" href="app.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4d79c8df4d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">BLAISE ITOE MUKWELLE</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="pages/about-me.html">About</a></li>
+            <li><a href="pages/projects-page.html">Projects</a></li>
+            <li><a href="pages/academic-planner.html">Planner</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">☰</div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Hi, I'm <span>Blaise Itoe Mukwelle</span></h1>
+        <h2 class="typing">Cybersecurity Student / AI Enthusiast / AI Prompt Engineer</h2>
+        <p>Welcome to my academic portfolio. Here you can explore my projects, skills, achievements, and academic planner built using HTML, CSS, and JavaScript.</p>
+        <a href="#" class="btn">Download Resume</a>
+    </div>
+
+    <div class="hero-image">
+        <img id="homeProfilePic" src="pages/assets/profile picture.png" alt="Profile picture">
+    </div>
+</section>
+
+<section class="summary">
+    <h2>Hire Me</h2>
+    <div class="summary-grid">
+        <div class="summary-card">
+            <h3>Creative Design</h3>
+            <p>I build polished, responsive web interfaces that bring ideas to life and provide a strong first impression for clients and employers.</p>
+        </div>
+        <div class="summary-card">
+            <h3>Technical Execution</h3>
+            <p>Every project is crafted with clean HTML, modern CSS, and JavaScript functionality that keeps the experience dynamic and accessible.</p>
+        </div>
+        <div class="summary-card">
+            <h3>Cybersecurity Focus</h3>
+            <p>As a cybersecurity student, I prioritize secure project structure, ethical hacking techniques, thoughtful interactions, and responsible web practices.</p>
+        </div>
+    </div>
+</section>
+
+<section class="featured">
+    <h2>Featured Projects</h2>
+    <div class="cards">
+        <div class="card">
+            <img id="featuredImg1" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450'><rect width='100%' height='100%' fill='%23eef9ff'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Poppins, sans-serif' font-size='34' fill='%2323395d'>Portfolio Website</text></svg>" alt="Portfolio Website">
+            <label class="featured-upload-label" for="featuredUpload1">Upload</label>
+            <input id="featuredUpload1" type="file" accept="image/*" style="display:none">
+            <h3>Portfolio Website</h3>
+            <p>Responsive personal portfolio created with HTML, CSS and JavaScript.</p>
+        </div>
+
+        <div class="card">
+            <img id="featuredImg2" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450'><rect width='100%' height='100%' fill='%23eef9ff'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Poppins, sans-serif' font-size='34' fill='%2323395d'>Academic Planner</text></svg>" alt="Academic Planner">
+            <label class="featured-upload-label" for="featuredUpload2">Upload</label>
+            <input id="featuredUpload2" type="file" accept="image/*" style="display:none">
+            <h3>Academic Planner</h3>
+            <p>Interactive planner that allows students to manage assignments.</p>
+        </div>
+
+        <div class="card">
+            <img id="featuredImg3" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450'><rect width='100%' height='100%' fill='%23eef9ff'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Poppins, sans-serif' font-size='34' fill='%2323395d'>Weather Dashboard</text></svg>" alt="Weather Dashboard">
+            <label class="featured-upload-label" for="featuredUpload3">Upload</label>
+            <input id="featuredUpload3" type="file" accept="image/*" style="display:none">
+            <h3>Weather Dashboard</h3>
+            <p>Live weather application using JavaScript and external APIs.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="socials">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>© Blaise in corporation to 2026 MIVA Open University</p>
+</footer>
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.nav-links');
+
+hamburger.onclick = () => {
+    nav.classList.toggle('show');
+};
+
+try {
+    const homePic = document.getElementById('homeProfilePic');
+    const saved = localStorage.getItem('profileImage');
+    if (homePic && saved) homePic.src = saved;
+} catch (e) {
+    console.error('Error loading saved profile image', e);
+}
+
+try {
+    const homeUpload = document.getElementById('homeUpload');
+    if (homeUpload) {
+        homeUpload.addEventListener('change', (e) => {
+            const file = e.target.files && e.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(ev) {
+                const dataUrl = ev.target.result;
+                const homePic = document.getElementById('homeProfilePic');
+                if (homePic) homePic.src = dataUrl;
+                try { localStorage.setItem('profileImage', dataUrl); } catch (err) { console.error('Could not save profileImage', err); }
+            };
+            reader.readAsDataURL(file);
+        });
+    }
+} catch (e) {
+    console.error('Error setting up home upload handler', e);
+}
+
+(() => {
+    const featuredCount = 3;
+    function svgPlaceholder(text, w=800, h=450){
+        const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${h}'><rect width='100%' height='100%' fill='%23eef9ff'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Poppins, sans-serif' font-size='24' fill='%2323395d'>${text}</text></svg>`;
+        return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+    }
+
+    for (let i = 1; i <= featuredCount; i++) {
+        const img = document.getElementById(`featuredImg${i}`);
+        const upload = document.getElementById(`featuredUpload${i}`);
+        const label = document.querySelector(`label[for="featuredUpload${i}"]`);
+        const card = img ? img.closest('.card') : null;
+        const titleEl = card ? card.querySelector('h3') : null;
+        const title = titleEl ? titleEl.textContent.trim() : `Featured ${i}`;
+
+        try {
+            const saved = localStorage.getItem(`featuredImage-${i}`);
+            if (saved && img) {
+                img.src = saved;
+                if (label) label.style.display = 'none';
+            } else if (img) img.src = svgPlaceholder(title);
+        } catch (e) {
+            if (img) img.src = svgPlaceholder(title);
+        }
+
+        if (upload && img) {
+            upload.addEventListener('change', (event) => {
+                const file = event.target.files && event.target.files[0];
+                if (!file) return;
+                const reader = new FileReader();
+                reader.onload = (loadEvent) => {
+                    const dataUrl = loadEvent.target.result;
+                    img.src = dataUrl;
+                    if (label) label.style.display = 'none';
+                    try { localStorage.setItem(`featuredImage-${i}`, dataUrl); } catch (err) { console.error('Could not save featured image', err); }
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+    }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Academic Planner</title>
+
+<link rel="stylesheet" href="../app.css">
+<link rel="stylesheet" href="academic-planner.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script defer src="academic-planner.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+BLAISE ITOE MUKWELLE
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="about-me.html">About</a></li>
+
+<li><a href="projects-page.html">Projects</a></li>
+
+<li><a class="active">Planner</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<section class="planner">
+
+<div class="planner-form">
+
+<h2>Add New Task</h2>
+
+<input type="text" id="task" placeholder="Task Name">
+
+<input type="text" id="course" placeholder="Course Code">
+
+<input type="date" id="date">
+
+<select id="priority">
+
+<option>High</option>
+
+<option>Medium</option>
+
+<option>Low</option>
+
+</select>
+
+<button id="addTask">
+
+Add Task
+
+</button>
+
+</div>
+
+
+<div class="planner-list">
+
+<h2>My Tasks</h2>
+
+<input type="text" id="search" placeholder="Search task...">
+
+<div class="filters">
+
+<button data-filter="all" class="active">All</button>
+
+<button data-filter="pending">Pending</button>
+
+<button data-filter="completed">Completed</button>
+
+</div>
+
+<div id="tasks"></div>
+
+</div>
+
+</section>
+
+
+<section class="stats">
+
+<div class="card">
+
+<h3>Total</h3>
+
+<p id="total">0</p>
+
+</div>
+
+<div class="card">
+
+<h3>Completed</h3>
+
+<p id="completed">0</p>
+
+</div>
+
+<div class="card">
+
+<h3>Pending</h3>
+
+<p id="pending">0</p>
+
+</div>
+
+</section>
+
+
+<section class="progress-section">
+
+<h2>Progress</h2>
+
+<div class="progress-bar">
+
+<div id="progress"></div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2025 MIVA Open University</p>
+
+</footer>
+
+</body>
+
+</html>

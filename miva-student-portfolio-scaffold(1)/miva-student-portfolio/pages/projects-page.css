@@ -1,0 +1,272 @@
+.projects-hero{
+
+padding:100px 20px;
+
+text-align:center;
+
+background:#eef9ff;
+
+}
+
+.projects-hero h1{
+
+font-size:55px;
+
+color:#23395d;
+
+margin-bottom:16px;
+
+}
+
+.projects-hero p{
+
+max-width:720px;
+
+margin:0 auto;
+
+color:#5b677d;
+
+line-height:1.8;
+
+}
+
+.filter{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+padding:50px 20px;
+
+flex-wrap:wrap;
+
+}
+
+.filter button{
+
+padding:12px 25px;
+
+border:none;
+
+background:#23395d;
+
+color:white;
+
+border-radius:30px;
+
+cursor:pointer;
+
+transition:.3s;
+
+font-size:16px;
+
+}
+
+.filter button:hover,
+.filter button.active{
+
+background:#ff6464;
+
+transform:translateY(-5px);
+
+}
+
+.projects{
+
+max-width:1200px;
+
+margin:auto;
+
+padding:20px;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+gap:35px;
+
+}
+
+.project-card{
+
+background:white;
+
+border-radius:15px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.4s;
+
+opacity:1;
+
+}
+
+.project-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.project-card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+transition:.5s;
+
+}
+
+.project-upload-label{
+    display:inline-block;
+    margin:15px 20px 0;
+    padding:10px 18px;
+    background:#23395d;
+    color:#fff;
+    border-radius:30px;
+    font-size:14px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.project-upload-label:hover{
+    background:#ff6464;
+}
+
+.project-card:hover img{
+
+transform:scale(1.08);
+
+}
+
+.content{
+
+padding:25px;
+
+}
+
+.content h2{
+
+color:#23395d;
+
+margin-bottom:15px;
+
+}
+
+.content p{
+
+line-height:1.8;
+
+color:#666;
+
+margin-bottom:20px;
+
+}
+
+.tags{
+
+display:flex;
+
+gap:10px;
+
+flex-wrap:wrap;
+
+margin-bottom:25px;
+
+}
+
+.tags span{
+
+background:#eef9ff;
+
+color:#23395d;
+
+padding:6px 15px;
+
+border-radius:20px;
+
+font-size:14px;
+
+}
+
+.buttons{
+
+display:flex;
+
+gap:15px;
+
+}
+
+.buttons a{
+
+flex:1;
+
+text-align:center;
+
+padding:12px;
+
+text-decoration:none;
+
+border-radius:5px;
+
+background:#23395d;
+
+color:white;
+
+transition:.3s;
+
+}
+
+.buttons a:hover{
+
+background:#ff6464;
+
+}
+
+.hide{
+
+display:none;
+
+}
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+@media(max-width:768px){
+
+.projects-hero h1{
+
+font-size:42px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+}
